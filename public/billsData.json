@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "bill_type": "electricity",
+      "organization_logo": "https://i.postimg.cc/wBqzsB3t/nescoa.png",
+      "bill_type_icon": "https://i.ibb.co.com/qYwnn1jg/thunder.jpg",
+      "organization": "NESCO",
+      "amount": 1280,
+      "due_date": "2025-04-12"
+    },
+    {
+      "id": 2,
+      "bill_type": "water",
+      "organization_logo": "https://i.ibb.co.com/235PB3HT/wasaa.png",
+      "bill_type_icon": "https://i.ibb.co.com/VWf3Xht6/wasalog.jpg",
+      "organization": "WASA",
+      "amount": 950,
+      "due_date": "2025-04-05"
+    },
+    {
+      "id": 3,
+      "bill_type": "gas",
+      "organization_logo": "https://i.ibb.co.com/ZpJjPwyM/f9c16e08-83ac-4d39-afbb-ac298a26b187.png",
+      "bill_type_icon": "https://i.ibb.co.com/Grnr0dB/gaslogo.png",
+      "organization": "Titas",
+      "amount": 1488,
+      "due_date": "2025-03-28"
+    },
+    {
+      "id": 4,
+      "bill_type": "internet",
+      "organization_logo": "https://i.ibb.co.com/DPxWZFYx/orbit.png",
+      "bill_type_icon": "https://i.ibb.co.com/JYrkb1r/internet-of-things.png",
+      "organization": "Orbit Internet",
+      "amount": 850,
+      "due_date": "2025-04-10"
+    },
+    {
+      "id": 5,
+      "bill_type": "credit_card",
+      "organization_logo": "https://i.ibb.co.com/KkG9GVw/logo-Paypal-1.png",
+      "bill_type_icon": "https://i.ibb.co.com/hFB8vMvL/cc-500x400.png",
+      "organization": "PayPal",
+      "amount": 3000,
+      "due_date": "2025-04-20"
+    }
+  ]
+  
