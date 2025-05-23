@@ -1,20 +1,20 @@
-import React from 'react';
-import { useLoaderData } from 'react-router';
-import BillsCard from '../Components/BillsCard';
+import React from "react";
+import { useLoaderData } from "react-router";
+import BillsCard from "../Components/BillsCard";
 
 const Bills = () => {
-    const data = useLoaderData()
-    // console.log(data);
-    
-    return (
-        <div className='space-y-10'>
-                <title>PayBill || Bills</title>
+  const data = useLoaderData();
+  // console.log(data);
 
-            {
-                data.map(bill => <BillsCard key={bill.id} bill={bill}></BillsCard>)
-            }
-        </div>
-    );
+  return (
+    <div className="space-y-10">
+      <title>PayBill || Bills</title>
+
+      {data.map((bill) => (
+        <BillsCard key={bill.id} bill={bill}></BillsCard>
+      ))}
+    </div>
+  );
 };
 
 export default Bills;
