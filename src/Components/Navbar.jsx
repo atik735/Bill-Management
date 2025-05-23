@@ -22,8 +22,6 @@ const Navbar = () => {
         console.log(error);
       })
     }
-  
-
 
 	const links = <>
 	<li><NavLink to='/' className={({ isActive }) =>
