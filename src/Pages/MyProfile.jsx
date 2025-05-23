@@ -19,10 +19,13 @@ const MyProfile = () => {
         setUser({ ...user, displayName: name, photoURL: photo });
         setSuccess(true);
         setErrorMessage("");
+
         formRef.current.reset();
       })
       .catch((error) => {
         setUser(user);
+    toast("Update successfull!");
+      
         setErrorMessage(error.message);
         setSuccess(false);
       });

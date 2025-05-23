@@ -4,7 +4,7 @@ import { auth } from "../firebase.init";
 import { sendPasswordResetEmail} from "firebase/auth";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../Contexts/AuthContext";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 
 const Login = (e) => {
