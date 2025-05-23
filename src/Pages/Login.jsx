@@ -162,7 +162,6 @@ const Login = (e) => {
           </p>
         </div>
       </form>
-
                 <Link to="/" className="btn btn-wide place-self-center mt-4">
                   Go Back Home
                 </Link>
