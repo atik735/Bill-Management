@@ -1,12 +1,48 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Bill Management Website 💳
 
-Currently, two official plugins are available:
+A modern and responsive Bill Management web application that allows users to view and pay utility bills using their available balance. It features secure authentication, dynamic bill filtering, balance deduction on payment, and profile management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Site
 
-## Expanding the ESLint configuration
+[🔴 Live URL Here](https://your-live-site-link.com)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🎯 Purpose
+
+To provide users with a simple and secure platform to manage and pay various utility bills online, such as electricity, gas, water, internet, and more. The system is designed with a familiar layout, secure login, and real-time balance deduction upon payment.
+
+---
+
+## 🚀 Key Features
+
+- 🔐 **Firebase Authentication (Email/Password + Google Login)**
+- 🧾 **Pay Bills using Balance** (default 10,000 BDT)
+- ✅ **Mark Bills as Paid**
+- 🔍 **Filter Bills by Type**
+- 📝 **Update Profile Info (Name & Photo)**
+- 🔁 **Redirect to Login if Unauthenticated**
+- 🖼️ **Icons & Logos for each bill**
+- 📱 **Fully Responsive** for Mobile, Tablet, and Desktop
+- 📦 JSON-Based Bill and Card Data
+- 🏦 Shows Partner Banks/Organizations (e.g., DESCO, WASA)
+
+---
+🧩 Packages & Technologies Used
+React Router
+
+Firebase Auth
+
+Tailwind CSS
+
+SwiperJS (for carousel)
+
+React Toastify
+
+React Icons
+Daisy Ui
+Vite
+
+JSON Data Simulation
+
