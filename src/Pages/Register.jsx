@@ -1,19 +1,19 @@
 import React, { useContext, useState } from "react";
 import { auth } from "../firebase.init";
-import { updateProfile } from "firebase/auth";
+import {updateProfile } from "firebase/auth";
 import { Link, useNavigate } from "react-router";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../Contexts/AuthContext";
 import { toast } from "react-toastify";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+    const {createUser} = useContext(AuthContext)
 
-  const navigate = useNavigate();
-
+    const navigate= useNavigate()
+    
   const [errorMessage, setErrorMessage] = useState("");
-  const [success, setSuccess] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
+  const [success,setSuccess] = useState(false);
+  const [showPassword,setShowPassword]=useState(false)
   const handleSignUp = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -25,40 +25,35 @@ const Register = () => {
     setErrorMessage("");
     setSuccess(false);
 
-
-    createUser(email, password)
-      .then((result) => {
-        console.log(result);
-        toast("Register successfull!");
-        setTimeout(() => {
-          navigate("/");
-        }, 400);
-        if (password.pattern="((?=.*[a-z])(?=.*[A-Z]).{6,}") {
-                  toast("Register error!"); //eikhan a ei toast a ektu prblm ache..follow korte hobe 10assignment
+    createUser(email,password).then((result) => {
+       console.log(result);
+       toast('Register successfull!')
+       setTimeout(() => {
+  navigate("/")
+}, 400);
+       const profile ={
+        displayName:name,
+        photoURL:photo
+       }
+       updateProfile(auth.currentUser,profile).then(
+        (result) =>{
+          setSuccess(true)
         }
-        const profile = {
-          displayName: name,
-          photoURL: photo,
-        };
-        updateProfile(auth.currentUser, profile)
-          .then((result) => {
-            setSuccess(true);
-          })
-          .catch((error) => {
-            setErrorMessage(error.message);
-          });
-      })
-
+       )
+       .catch((error) => {
+        setErrorMessage(error.message)
+      });
+    })
     .catch((error) =>{
-      toast(error)
       console.log(error);
+      toast(error.message)
       setErrorMessage(error.message)
     })
   };
 
   return (
     <div className="flex flex-col max-w-md p-6 mx-auto mt-12 rounded-md sm:p-10 bg-gray-50 text-gray-800">
-      <title>PayBill || Register</title>
+               <title>PayBill || Register</title>
       <div className="mb-8 text-center">
         <h1 className="my-3 text-4xl font-bold">Register</h1>
         <p className="text-sm text-gray-600">Register to access your account</p>
@@ -66,7 +61,9 @@ const Register = () => {
       <form onSubmit={handleSignUp} className="space-y-5">
         <div className="space-y-2">
           <div>
-            <label className="block mb-2 text-sm">Name</label>
+            <label className="block mb-2 text-sm">
+              Name
+            </label>
             <input
               type="text"
               name="name"
@@ -77,7 +74,9 @@ const Register = () => {
             />
           </div>
           <div>
-            <label className="block mb-2 text-sm">Photo URL</label>
+            <label className="block mb-2 text-sm">
+              Photo URL
+            </label>
             <input
               type="text"
               name="photo"
@@ -107,26 +106,18 @@ const Register = () => {
               </label>
             </div>
             <div className="relative">
-              <input
-                type={showPassword ? "text" : "password"}
-                name="password"
-                id="password"
-                placeholder="*****"
-                required
-                className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
-              />
-              <button
-                onClick={() => setShowPassword(!showPassword)}
-                type="button"
-                className="absolute top-2 right-4 bg-gray-200 p-0.5 px-1"
-              >
-                {" "}
-                {showPassword ? (
-                  <FaEyeSlash></FaEyeSlash>
-                ) : (
-                  <FaEye></FaEye>
-                )}{" "}
-              </button>
+            <input
+              type={showPassword?"text" : "password"}
+              name="password"
+              id="password"
+              placeholder="*****"
+              required
+              minLength="6"
+              pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}"
+              title="Must be more than 6 characters, lowercase letter, uppercase letter"
+              className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
+            />
+            <button onClick={() =>setShowPassword(!showPassword)} type="button" className="absolute top-2 right-4 bg-gray-200 p-0.5 px-1"> {showPassword? <FaEyeSlash></FaEyeSlash> :<FaEye></FaEye>} </button>
             </div>
           </div>
         </div>
@@ -151,9 +142,9 @@ const Register = () => {
         </div>
       </form>
 
-      <Link to="/" className="btn btn-wide place-self-center mt-4">
-        Go Back Home
-      </Link>
+                      <Link to="/" className="btn btn-wide place-self-center mt-4">
+                        Go Back Home
+                      </Link>
     </div>
   );
 };
