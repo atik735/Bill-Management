@@ -7,6 +7,7 @@ const PayBillCard = ({ paybill }) => {
   const [success, setSuccess] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
   const { payAmount, setPayAmount } = useContext(AuthContext);
+
   const handlePayBill = (amount) => {
     const convertAmount = parseInt(amount);
     setPayAmount((prev) => prev - convertAmount);

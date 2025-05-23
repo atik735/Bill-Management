@@ -25,6 +25,7 @@ const Register = () => {
     setErrorMessage("");
     setSuccess(false);
 
+
     createUser(email, password)
       .then((result) => {
         console.log(result);
@@ -32,6 +33,9 @@ const Register = () => {
         setTimeout(() => {
           navigate("/");
         }, 400);
+        if (password.pattern="((?=.*[a-z])(?=.*[A-Z]).{6,}") {
+                  toast("Register error!"); //eikhan a ei toast a ektu prblm ache..follow korte hobe 10assignment
+        }
         const profile = {
           displayName: name,
           photoURL: photo,
@@ -44,11 +48,12 @@ const Register = () => {
             setErrorMessage(error.message);
           });
       })
-      .catch((error) => {
-        console.log(error);
-        toast(error.message);
-        setErrorMessage(error.message);
-      });
+
+    .catch((error) =>{
+      toast(error)
+      console.log(error);
+      setErrorMessage(error.message)
+    })
   };
 
   return (
@@ -108,9 +113,6 @@ const Register = () => {
                 id="password"
                 placeholder="*****"
                 required
-                minLength="6"
-                pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}"
-                title="Must be more than 6 characters, lowercase letter, uppercase letter"
                 className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
               />
               <button
