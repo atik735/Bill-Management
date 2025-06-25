@@ -1,49 +1,73 @@
 
 # Bill Management Website 💳
 
-# Overview  
 A modern and responsive Bill Management web application that allows users to view and pay utility bills using their available balance. It features secure authentication, dynamic bill filtering, balance deduction on payment, and profile management.
 
-## 🔗 Live Site
+## 🌐 Live URL
 
-🔴 [Live URL Here](https://bill-pays-98812.web.app/)
+🔗 [Live Site](https://bill-pays-98812.web.app/)
 
 ---
 
-## 🎯 Purpose
+## 🧠 Project Overview
 
-To provide users with a simple and secure platform to manage and pay various utility bills online, such as electricity, gas, water, internet, and more. The system is designed with a familiar layout, secure login, and real-time balance deduction upon payment.
+This application enables users to:
+
+- 🧾 Add and manage bill payments
+- 🔍 View a summary of total paid/unpaid bills
+- 🔐 Register/Login securely using Firebase Authentication
+- 📝 Filter and view bills based on status
+- 📊 Responsive design for mobile and desktop
+- ⚡ Smooth UI/UX using modern design tools
 
 ---
 
 ## 🚀 Key Features
 
-- 🔐 **Firebase Authentication (Email/Password + Google Login)**
-- 🧾 **Pay Bills using Balance** (default 10,000 BDT)
-- ✅ **Mark Bills as Paid**
-- 🔍 **Filter Bills by Type**
-- 📝 **Update Profile Info (Name & Photo)**
-- 🔁 **Redirect to Login if Unauthenticated**
-- 🖼️ **Icons & Logos for each bill**
-- 📱 **Fully Responsive** for Mobile, Tablet, and Desktop
-- 📦 JSON-Based Bill and Card Data
-- 🏦 Shows Partner Banks/Organizations (e.g., DESCO, WASA)
+- 🔐 Firebase Authentication (Email/Password)
+- ➕ Add new bills with amount and date
+- ✅ Mark bills as paid/unpaid
+- 🧮 Summary section for total paid/unpaid
+- 🧾 Bill history list with status filter
+- 🎯 User-specific data tracking
+- 📱 Fully responsive and mobile-first layout
+- 📣 Toast notifications on actions
 
 ---
-🧩 Packages & Technologies Used
-React Router
 
-Firebase Auth
+## 📦 NPM Packages Used
 
-Tailwind CSS
+| Package           | Description                                      |
+|-------------------|--------------------------------------------------|
+| `firebase`        | For authentication and Firestore DB              |
+| `react`           | JavaScript library for UI                        |
+| `react-dom`       | DOM support for React                            |
+| `react-router`    | Page routing and navigation                      |
+| `tailwindcss`     | CSS utility framework                            |
+| `react-toastify`  | Toast notifications                              |
+| `swiper`          | For carousels/sliders if used                    |
+| `react-icons`     | For using icons in UI                            |
+| `daisyui`         | Component UI library on top of Tailwind          |
+| `vite`            | Fast frontend tooling                            |
 
-SwiperJS (for carousel)
+---
 
-React Toastify
+## 🛠️ How to Run the Project Locally
 
-React Icons
-Daisy Ui
-Vite
+### 📁 Step 1: Clone the Repository
 
-JSON Data Simulation
+```bash
+git clone https://github.com/your-username/your-bill-management-repo.git
+
+cd your-bill-management-repo
+npm install
+⚙️ Step 4: Setup Firebase Environment Variables
+VITE_APIKEY=your_firebase_api_key
+VITE_AUTHDOMAIN=your_project.firebaseapp.com
+VITE_PROJECTID=your_project_id
+VITE_STORAGEBUCKET=your_project.appspot.com
+VITE_MESSAGINGSENDERID=your_sender_id
+VITE_APPID=your_app_id
+-----
+npm run dev
 
