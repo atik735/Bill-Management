@@ -1,6 +1,7 @@
 
 # Bill Management Website 💳
 
+# Overview  
 A modern and responsive Bill Management web application that allows users to view and pay utility bills using their available balance. It features secure authentication, dynamic bill filtering, balance deduction on payment, and profile management.
 
 ## 🔗 Live Site
